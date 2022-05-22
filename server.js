@@ -21,9 +21,9 @@ app.use(
 app.use(express.json());
 
 // Routes
-app.use('/api/user', require('./routes/auth'));
-app.use('/api/events', require('./routes/events'));
-app.use('/api/posts', require('./routes/posts'));
+app.use('/api/user', require('./api/auth'));
+app.use('/api/events', require('./api/events'));
+app.use('/api/posts', require('./api/posts'));
 
 // Launch server.js listener
 app.listen(port, () => console.log(`Server runs on: http://localhost:8080`));
