@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "testing",
-    "start": "nodemon --inspect ./server.js 80"
+    "start": "nodemon server.js"
   },
   "author": "Sanny Khaled",
   "license": "ISC",
