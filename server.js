@@ -5,7 +5,7 @@ const cloudinary = require('cloudinary');
 const fileUpload = require('express-fileupload');
 const cors = require('cors');
 const connectDB = require('./config/db');
-
+let port = process.env.PORT || 8080;
 //DB Connection
 connectDB();
 // Init Express
@@ -26,4 +26,4 @@ app.use('/api/events', require('./routes/events'));
 app.use('/api/posts', require('./routes/posts'));
 
 // Launch server.js listener
-app.listen(process.env.PORT || 8080, () => console.log(`Server runs on: http://localhost:8080`));
+app.listen(port, () => console.log(`Server runs on: http://localhost:8080`));
