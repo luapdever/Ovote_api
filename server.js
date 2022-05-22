@@ -26,4 +26,4 @@ app.use('/api/events', require('./routes/events'));
 app.use('/api/posts', require('./routes/posts'));
 
 // Launch server.js listener
-app.listen(8080, () => console.log(`Server runs on: http://localhost:8080`));
+app.listen(process.env.PORT || 8080, () => console.log(`Server runs on: http://localhost:8080`));
