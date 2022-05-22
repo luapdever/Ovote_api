@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "testing",
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "author": "Sanny Khaled",
   "license": "ISC",
