@@ -5,7 +5,7 @@ const cloudinary = require('cloudinary');
 const fileUpload = require('express-fileupload');
 const cors = require('cors');
 const connectDB = require('./config/db');
-let port = process.env.PORT || 8080;
+let port = process.env.PORT || 5000;
 //DB Connection
 connectDB();
 // Init Express
@@ -25,7 +25,9 @@ app.get('/', (req, res) => {
   res.send('ok');
 });
 app.use('/api/user', require('./api/auth'));
+// EVENT
 app.use('/api/events', require('./api/events'));
+
 app.use('/api/posts', require('./api/posts'));
 
 // Launch server.js listener
